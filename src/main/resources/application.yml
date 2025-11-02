@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: application
+  config:
+    import: aws-parameterstore:/myapp/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+app:
+  name: application
+
+
+aws:
+  region:
+    static: ap-south-1
